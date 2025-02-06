@@ -1,0 +1,5 @@
+18:15:56 [main] INFO  Main - Log4j Info
+18:15:56 [main] DEBUG Main - Log4j Debug
+18:15:56 [main] WARN  Main - Log4j Warning
+18:15:56 [main] ERROR Main - Log4j Error
+18:15:56 [main] FATAL Main - Log4j Fatal
