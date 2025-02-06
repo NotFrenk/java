@@ -7,10 +7,10 @@ import java.util.logging.Logger;
  * Costruire una classe calcolatrice con 4 metodi somma, sottrazione, divisione e moltiplicazione e inserire i log nei vari metodi con le varie priorità.
  */
 
-public class esercizio {
+public class calcolatrice {
 
 	public static void main(String[] args) {
-		esercizio calcolatrice = new esercizio();
+		calcolatrice calcolatrice = new calcolatrice();
         calcolatrice.somma(10, 5);
         calcolatrice.sottrazione(10, 5);
         calcolatrice.moltiplicazione(10, 5);
@@ -22,7 +22,7 @@ public class esercizio {
 
 	}
 	
-	private static final Logger logger = Logger.getLogger(esercizio.class.getName());
+	private static final Logger logger = Logger.getLogger(calcolatrice.class.getName());
 	
 
     public double somma(double a, double b) {
