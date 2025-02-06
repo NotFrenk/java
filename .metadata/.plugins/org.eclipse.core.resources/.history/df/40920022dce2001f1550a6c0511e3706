@@ -1,0 +1,10 @@
+
+public class Esempio3Reflection {
+
+	public static void main(String[] args) {
+		String str = "Hello world";
+		
+
+	}
+
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class es_2 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Inserisci il numero e io ti dirò se è PARI o DISPARI");
+		double numero1 = scanner.nextDouble();
+		
+		if (numero1 % 2 ==0) {
+			System.out.println("Il numero :" + numero1 + " è pari.");
+		}else {
+			System.out.println("Il numero :" + numero1 + " è dispari.");
+		}
+	}
+
+}

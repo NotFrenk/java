@@ -1,0 +1,10 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class test_con_exeption {
+
+	@Test 
+	void test_con_exeption() { 
+		JUnitException ex = new JUnitException();
+		Exception exception = assertThrows(Exception.class, () ‐> ex.testException()); assertEquals("Eccezione JUnit", exception.getMessage()); }
+	}

@@ -1,0 +1,27 @@
+
+public class es_calcolatrice {
+
+	public static void main(String[] args) {
+		es_calcolatrice c = new es_calcolatrice();
+		System.out.println("La somma è " + c.somma(3, 2));
+		System.out.println("La sottrazione è " + c.sottrazione(5, 3));
+		System.out.println("La moltiplicazione è " + c.moltiplicazione(3, 2));
+		System.out.println("La divisione è " + c.divisione(10, 2));
+	}
+
+	public int somma(int a, int b) {
+		return a + b;
+	}
+
+	public int sottrazione(int a, int b) {
+		return a - b;
+	}
+
+	public int moltiplicazione(int a, int b) {
+		return a * b;
+	}
+
+	public int divisione(int a, int b) {
+		return a / b;
+	}
+}

@@ -1,0 +1,23 @@
+import java.lang.reflect.Field;
+
+public class Esempio4Relection {
+
+	public static void main(String[] args) {
+		persona_es4 p = new persona_es4();
+		try {
+			Field camponome = persona_es4.class.getDeclaredField("nome");
+			camponome.setAccessible(true);
+			
+			System.out.println(camponome);
+			
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

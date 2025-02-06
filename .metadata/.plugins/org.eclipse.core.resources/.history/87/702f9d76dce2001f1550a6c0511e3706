@@ -1,0 +1,4 @@
+
+public class persona_es4 {
+	private String nome = "l";
+}
