@@ -10,7 +10,7 @@ class LettoreMessaggi extends Thread {
         try {
             while (true) {
                 casella.leggiMessaggio();
-                Thread.sleep(1000); // Simula il tempo necessario per leggere un messaggio
+                Thread.sleep(1000); 
             }
         } catch (InterruptedException e) {
             System.out.println("Lettore interrotto.");
