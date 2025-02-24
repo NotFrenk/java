@@ -1,13 +1,18 @@
 package com.spring.Ute.dao;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.spring.Ute.entity.Utente;
 
-public class DAOUtenteMappa {
+
+@Repository
+public class DAOUtenteMappaImpl implements DAOUtente{
 
 	private Map<Integer, Utente> mappa = new HashMap<>();
 
@@ -31,7 +36,5 @@ public class DAOUtenteMappa {
 		Utente utente = mappa.remove(idUtente);
 		return utente!=null;
 	}
-	
-	
 
 }

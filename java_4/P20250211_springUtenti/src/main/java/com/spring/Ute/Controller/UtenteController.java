@@ -4,6 +4,7 @@ package com.spring.Ute.Controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,8 @@ import com.spring.Ute.service.UtenteService;
 @RequestMapping(path = "/utenti")
 public class UtenteController {
 	
-	private UtenteService service = new UtenteService();
+	@Autowired
+	private UtenteService service;
 	
 	@GetMapping(path = "/registra", consumes = "application/json")
 	public boolean registra(@RequestBody UtenteDTO dto) {
