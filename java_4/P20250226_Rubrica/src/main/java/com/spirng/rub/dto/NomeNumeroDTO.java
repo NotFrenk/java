@@ -9,6 +9,16 @@ public class NomeNumeroDTO {
 	public NomeNumeroDTO() {
 		super();
 	}
+	
+	
+
+	public NomeNumeroDTO(List<String> nomiProprietari, int numeroTotaleRubriche) {
+		super();
+		this.nomiProprietari = nomiProprietari;
+		this.numeroTotaleRubriche = numeroTotaleRubriche;
+	}
+
+
 
 	public List<String> getNomiProprietari() {
 		return nomiProprietari;
