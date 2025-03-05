@@ -9,7 +9,7 @@ public class entityContattoTelefonico {
     private String nome;
     private String cognome;
     private String gruppoAppartenenza = "default";
-    private LocalDate dataNascita;
+    private int dataNascita;
     private boolean preferito = false;
     
 	public entityContattoTelefonico() {
@@ -17,7 +17,7 @@ public class entityContattoTelefonico {
 	}
 
 	public entityContattoTelefonico(int idContatto, String nome, String cognome, String gruppoAppartenenza,
-			LocalDate dataNascita, boolean preferito) {
+			int dataNascita, boolean preferito) {
 		super();
 		this.idContatto = idContatto;
 		this.nome = nome;
@@ -59,11 +59,11 @@ public class entityContattoTelefonico {
 		this.gruppoAppartenenza = gruppoAppartenenza;
 	}
 
-	public LocalDate getDataNascita() {
+	public int getDataNascita() {
 		return dataNascita;
 	}
 
-	public void setDataNascita(LocalDate dataNascita) {
+	public void setDataNascita(int dataNascita) {
 		this.dataNascita = dataNascita;
 	}
 

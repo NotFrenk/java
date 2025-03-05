@@ -8,14 +8,14 @@ public class ContattoDTO {
     private String nome;
     private String cognome;
     private String gruppoAppartenenza = "default";
-    private LocalDate dataNascita;
+    private int dataNascita;
     private boolean preferito = false;
     
 	public ContattoDTO() {
 		super();
 	}
 
-	public ContattoDTO(int idContatto, String nome, String cognome, String gruppoAppartenenza, LocalDate dataNascita,
+	public ContattoDTO(int idContatto, String nome, String cognome, String gruppoAppartenenza, int dataNascita,
 			boolean preferito) {
 		super();
 		this.idContatto = idContatto;
@@ -58,11 +58,11 @@ public class ContattoDTO {
 		this.gruppoAppartenenza = gruppoAppartenenza;
 	}
 
-	public LocalDate getDataNascita() {
+	public int getDataNascita() {
 		return dataNascita;
 	}
 
-	public void setDataNascita(LocalDate dataNascita) {
+	public void setDataNascita(int dataNascita) {
 		this.dataNascita = dataNascita;
 	}
 

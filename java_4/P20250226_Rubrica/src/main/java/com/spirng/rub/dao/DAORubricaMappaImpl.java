@@ -5,10 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
 
 import com.spirng.rub.entity.entityRubrica;
 
-public class DAORubricaMappaImpl {
+@Repository
+public class DAORubricaMappaImpl implements DAORubricaMappa{
 	
 	private Map<Integer, entityRubrica> mappa = new HashMap<>();
 

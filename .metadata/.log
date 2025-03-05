@@ -1981,3 +1981,281 @@ org.eclipse.core.runtime.CoreException: Launch configuration UniversitaApplicati
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.jdt.launching 4 107 2025-03-05 09:46:00.884
 !MESSAGE Launch configuration UniversitaApplication references non-existing project P20250217_universita.
+!SESSION 2025-03-05 10:20:26.771 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-05 10:20:28.009
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-03-05 10:20:28.178
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1436) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-05 10:20:42.090
+!MESSAGE Logback config file: /home/user/Scrivania/cose/java/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-05 10:20:42.314
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-05 10:20:42.314
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-05 10:20:42.473
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-05 10:20:42.473
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:21:59.302
+!MESSAGE Classpath changed for project: test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:21:59.352
+!MESSAGE Classpath changed for project: P20241120
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:21:59.446
+!MESSAGE Classpath changed for project: esercizio
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.476
+!MESSAGE Classpath changed for project: P20240106_04_schermo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.476
+!MESSAGE Classpath changed for project: P20241002_02_secondo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.476
+!MESSAGE Classpath changed for project: P20241002_3_pitagora
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241021_01_esercizio
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P2024111301_resume
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241120
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241120_esInClasse
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241122_test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241129_01_DataStructure
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241129_02_DataStracture
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241129_IO
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241206_01_Aerei
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241206_02_Animale
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241211_02_CodaAsincrona
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241213_01_progettoManufatturiera
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241213_progettoManufatturiera
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241218_01_Socket_Server
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241218_02_SocketClient
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241218_progettino_client
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.477
+!MESSAGE Classpath changed for project: P20241218_progettino_server
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20241220_SetteMezzo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250110_thread
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250115_producerConsumer
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250115_thread_sincronizati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250129_log
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250131_UnitTest
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250131_esercizi_UnitTest
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250203_esercizi
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250204_reflection
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250207_esame
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250211_inizio_java4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250211_spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250211_springUtenti
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250214_springReport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: P20250226_Rubrica
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: Prima volta in java
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.478
+!MESSAGE Classpath changed for project: SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.479
+!MESSAGE Classpath changed for project: esercizio
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.479
+!MESSAGE Classpath changed for project: esercizioComputer
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.573
+!MESSAGE Classpath changed for project: mutaforma
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:01.573
+!MESSAGE Classpath changed for project: test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.543
+!MESSAGE Classpath changed for project: com.example_P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.729
+!MESSAGE Classpath changed for project: com.example_P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.729
+!MESSAGE Boot project ADDED: com.example_P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.729
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.761
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-05 10:22:02.781
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/usr/lib/jvm/jdk-21.0.4-oracle-x64/bin/java
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=/home/user/Scrivania/cose/java/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1741166522781
+-Dlanguageserver.hover-timeout=225
+-jar
+/home/user/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.springframework.tooling.boot.ls_1.60.0.202502031607/servers/spring-boot-language-server/spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.781
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-05 10:22:02.785
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 10548
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:02.880
+!MESSAGE Classpath changed for project: com.example_P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:05.519
+!MESSAGE Classpath changed for project: P20250211_spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:05.520
+!MESSAGE Boot project ADDED: P20250211_spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:05.553
+!MESSAGE Classpath changed for project: P20250211_spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.315
+!MESSAGE Classpath changed for project: P20250211_springUtenti
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.315
+!MESSAGE Boot project ADDED: P20250211_springUtenti
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.316
+!MESSAGE Classpath changed for project: P20250214_springReport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.316
+!MESSAGE Boot project ADDED: P20250214_springReport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.316
+!MESSAGE Classpath changed for project: P20250226_Rubrica
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.316
+!MESSAGE Boot project ADDED: P20250226_Rubrica
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.696
+!MESSAGE Classpath changed for project: SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:22:07.696
+!MESSAGE Boot project ADDED: SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:23:29.051
+!MESSAGE Classpath changed for project: P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:23:29.051
+!MESSAGE Classpath changed for project: com.example_P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:23:29.051
+!MESSAGE Boot project REMOVED: com.example_P20250224_springUniverista
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:24:57.683
+!MESSAGE Classpath changed for project: P20250226_SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:24:57.683
+!MESSAGE Classpath changed for project: SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:24:57.684
+!MESSAGE Boot project REMOVED: SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:24:58.208
+!MESSAGE Classpath changed for project: P20250226_SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-05 10:24:58.208
+!MESSAGE Boot project ADDED: P20250226_SpringUniversità
+
+!ENTRY org.eclipse.jface 2 0 2025-03-05 12:43:41.062
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-03-05 12:43:41.062
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
