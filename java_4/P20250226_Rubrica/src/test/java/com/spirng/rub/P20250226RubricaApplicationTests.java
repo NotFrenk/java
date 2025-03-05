@@ -1,10 +1,10 @@
-package com.example.uni;
+package com.spirng.rub;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class P20250224SpringUniveristaApplicationTests {
+class P20250226RubricaApplicationTests {
 
 	@Test
 	void contextLoads() {

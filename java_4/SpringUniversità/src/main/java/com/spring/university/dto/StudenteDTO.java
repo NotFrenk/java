@@ -6,7 +6,6 @@ public class StudenteDTO {
 	private int annoNascita, annoMatricolazione;
 
 	public StudenteDTO() {
-// TODO Auto-generated constructor stub
 	}
 
 	public StudenteDTO(int matricola, String nome, String cognome, String indirizzo, int annoNascita,
