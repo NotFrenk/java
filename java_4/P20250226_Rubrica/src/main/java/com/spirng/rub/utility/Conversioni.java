@@ -24,4 +24,5 @@ public class Conversioni {
 		return new ContattoDTO(entity.getIdContatto(), entity.getNome(), entity.getCognome(), entity.getGruppoAppartenenza(), entity.getDataNascita(), false);
 	}
 	
+	
 }

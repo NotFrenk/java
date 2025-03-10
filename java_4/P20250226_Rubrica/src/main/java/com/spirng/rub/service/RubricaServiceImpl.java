@@ -38,11 +38,18 @@ public class RubricaServiceImpl implements RubricaService{
 		}
 		return null;
 	}
-//	
-//	//visualizza tutte le rubriche
-//	public List<entityRubrica> tutteRubriche(){
-//		return DAO.selectAll();
-//	}
+	
+	//visualizza tutte le rubriche	
+	public List<RubricaDTO> tutteRubriche(){
+		List<entityRubrica> lista = dao.selectAll();
+		ArrayList<RubricaDTO> listaDTO = new ArrayList<>();
+		
+		for (int i=0; i<lista.size();i++) {
+			listaDTO.add(Conversioni.daRubricaARubricaDTO(lista.get(i)));
+		}
+		return listaDTO;	
+	}
+	
 //	
 //	//cancella una rubrica
 //	public boolean eliminaRubrica (int id) {

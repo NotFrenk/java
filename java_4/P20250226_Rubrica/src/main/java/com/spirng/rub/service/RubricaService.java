@@ -1,12 +1,14 @@
 package com.spirng.rub.service;
 
+import java.util.List;
+
 import com.spirng.rub.dto.RubricaDTO;
 
 public interface RubricaService {
 	
 	public boolean aggiungiRubrica (RubricaDTO dto);
-//	public entityRubrica trovaRubricaPerId(int id);
-//	public List<entityRubrica> tutteRubriche();
+	public RubricaDTO trovaRubricaPerId(int id);
+	public List<RubricaDTO> tutteRubriche();
 //	public boolean eliminaRubrica (int id);
 //	public String proprietarioAnnoCreazione (int id);
 //	public entityRubrica modificaNomeProprietario(int id, String nuovoNome);
