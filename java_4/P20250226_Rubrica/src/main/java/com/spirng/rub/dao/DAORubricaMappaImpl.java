@@ -44,7 +44,7 @@ public class DAORubricaMappaImpl implements DAORubricaMappa {
 
 		mappa.put(rubrica.getId(), rubrica);
 		return true;
-	}
+	}	
 	
 
 	public List<entityRubrica> selectAll() {

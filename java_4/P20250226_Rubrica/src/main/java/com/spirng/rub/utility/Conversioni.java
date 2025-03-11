@@ -1,6 +1,8 @@
 package com.spirng.rub.utility;
 
 import com.spirng.rub.dto.ContattoDTO;
+import com.spirng.rub.dto.NomeNumeroDTO;
+import com.spirng.rub.dto.ProprietarioAnnoDTO;
 import com.spirng.rub.dto.RubricaDTO;
 import com.spirng.rub.entity.entityContattoTelefonico;
 import com.spirng.rub.entity.entityRubrica;
@@ -22,6 +24,10 @@ public class Conversioni {
 	
 	public static ContattoDTO daEntityContattoAContattoDTO(entityContattoTelefonico entity) {
 		return new ContattoDTO(entity.getIdContatto(), entity.getNome(), entity.getCognome(), entity.getGruppoAppartenenza(), entity.getDataNascita(), false);
+	}
+	
+	public static ProprietarioAnnoDTO daRubricaAProprietarioAnnoDTO(entityRubrica entity) {
+		return new ProprietarioAnnoDTO(entity.getNomeProprietario(), entity.getAnnoCreazione());
 	}
 	
 	
