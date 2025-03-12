@@ -19,11 +19,11 @@ public class Conversioni {
 	}
 	
 	public static entityContattoTelefonico daContattoDTOAContatto(ContattoDTO dto) {
-		return new entityContattoTelefonico(dto.getIdContatto(), dto.getNome(), dto.getCognome(), dto.getGruppoAppartenenza(), dto.getDataNascita(), false);
+		return new entityContattoTelefonico(dto.getIdContatto(), dto.getNome(), dto.getCognome(), dto.getGruppoAppartenenza(), dto.getDataNascita(), false, dto.getTelefono());
 	}
 	
 	public static ContattoDTO daEntityContattoAContattoDTO(entityContattoTelefonico entity) {
-		return new ContattoDTO(entity.getIdContatto(), entity.getNome(), entity.getCognome(), entity.getGruppoAppartenenza(), entity.getDataNascita(), false);
+		return new ContattoDTO(entity.getIdContatto(), entity.getNome(), entity.getCognome(), entity.getGruppoAppartenenza(), entity.getDataNascita(), false, entity.getTelefono());
 	}
 	
 	public static ProprietarioAnnoDTO daRubricaAProprietarioAnnoDTO(entityRubrica entity) {

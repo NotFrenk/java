@@ -1,6 +1,8 @@
 package com.spirng.rub.dto;
 
+import java.sql.Date;
 import java.time.LocalDate;
+
 
 public class ContattoDTO {
 	
@@ -8,15 +10,16 @@ public class ContattoDTO {
     private String nome;
     private String cognome;
     private String gruppoAppartenenza = "default";
-    private int dataNascita;
+    private Date dataNascita;
     private boolean preferito = false;
+    private int telefono;
     
 	public ContattoDTO() {
 		super();
 	}
 
-	public ContattoDTO(int idContatto, String nome, String cognome, String gruppoAppartenenza, int dataNascita,
-			boolean preferito) {
+	public ContattoDTO(int idContatto, String nome, String cognome, String gruppoAppartenenza,
+			Date dataNascita, boolean preferito, int telefono) {
 		super();
 		this.idContatto = idContatto;
 		this.nome = nome;
@@ -24,6 +27,7 @@ public class ContattoDTO {
 		this.gruppoAppartenenza = gruppoAppartenenza;
 		this.dataNascita = dataNascita;
 		this.preferito = preferito;
+		this.setTelefono(telefono);
 	}
 
 	public int getIdContatto() {
@@ -58,11 +62,11 @@ public class ContattoDTO {
 		this.gruppoAppartenenza = gruppoAppartenenza;
 	}
 
-	public int getDataNascita() {
+	public Date getDataNascita() {
 		return dataNascita;
 	}
 
-	public void setDataNascita(int dataNascita) {
+	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
 	}
 
@@ -73,6 +77,15 @@ public class ContattoDTO {
 	public void setPreferito(boolean preferito) {
 		this.preferito = preferito;
 	}
+
+	public int getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
     
     
+	
 }
