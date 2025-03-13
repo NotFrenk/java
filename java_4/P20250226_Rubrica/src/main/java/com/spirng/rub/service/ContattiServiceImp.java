@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.spirng.rub.dao.DAORubricaMappaImpl;
 import com.spirng.rub.dto.ContattoDTO;
@@ -11,6 +12,7 @@ import com.spirng.rub.entity.entityContattoTelefonico;
 import com.spirng.rub.entity.entityRubrica;
 import com.spirng.rub.utility.Conversioni;
 
+@Service
 public class ContattiServiceImp implements ContattiService{
 	@Autowired
 	public DAORubricaMappaImpl dao;

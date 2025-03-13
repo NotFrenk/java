@@ -40,42 +40,84 @@ public class DAORubricaMappaImpl implements DAORubricaMappa {
 		}
 
 	}
-
+ 
+	@Override
 	public boolean insert(entityRubrica rubrica) {
-		// PUNTO 4	
-		Connection conn = Connessione();
-		String myquery = "INSERT INTO rubrica (id,proprietario,anno) VALUES(?,?,?);";
-		PreparedStatement prep;
-		try {
-			prep = conn.prepareStatement(myquery);
-			prep.setInt(1, rubrica.getId());
-			prep.setString(2, rubrica.getNomeProprietario());
-			prep.setInt(3, rubrica.getAnnoCreazione());
-			// PUNTO 5 : eseguire la QUERY
-			prep.execute();
-		}catch (SQLException e) {
-			throw new RuntimeException("operazioine fallita");
-		}
-		return true;
+	    String sql = "INSERT INTO rubrica (id, proprietario, anno) VALUES (?, ?, ?)";
+	    try (Connection conn = Connessione();
+	         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+	        pstmt.setInt(1, rubrica.getId());
+	        pstmt.setString(2, rubrica.getNomeProprietario());
+	        pstmt.setInt(3, rubrica.getAnnoCreazione());
+	        int rows = pstmt.executeUpdate();
+	        return rows > 0;
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        return false;
+	    }
 	}
 	
 	
 	
 
+	@Override
 	public List<entityRubrica> selectAll() {
-		return new ArrayList<>(mappa.values());
+	    String sql = "SELECT * FROM rubrica";
+	    List<entityRubrica> rubriche = new ArrayList<>();
+	    try (Connection conn = Connessione();
+	         PreparedStatement pstmt = conn.prepareStatement(sql);
+	         ResultSet rs = pstmt.executeQuery()) {
+	        while (rs.next()) {
+	            entityRubrica rubrica = new entityRubrica();
+	            rubrica.setId(rs.getInt("id"));
+	            rubrica.setNomeProprietario(rs.getString("proprietario"));
+	            rubrica.setAnnoCreazione(rs.getInt("anno"));
+	            rubriche.add(rubrica);
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return rubriche;
 	}
+	
 
+
+	@Override
 	public entityRubrica selectById(Integer idRubrica) {
-		return mappa.get(idRubrica);
+	    String sql = "SELECT * FROM rubrica WHERE id = ?";
+	    try (Connection conn = Connessione();
+	         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+	        pstmt.setInt(1, idRubrica);
+	        try (ResultSet rs = pstmt.executeQuery()) {
+	            if (rs.next()) {
+	                entityRubrica rubrica = new entityRubrica();
+	                rubrica.setId(rs.getInt("id"));
+	                rubrica.setNomeProprietario(rs.getString("proprietario"));
+	                rubrica.setAnnoCreazione(rs.getInt("anno"));
+	                return rubrica;
+	            }
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return null;
 	}
 
+	@Override
 	public boolean delete(Integer idRubrica) {
-		entityRubrica rubrica = mappa.remove(idRubrica);
-		return rubrica != null;
+	    String sql = "DELETE FROM rubrica WHERE id = ?";
+	    try (Connection conn = Connessione();
+	         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+	        pstmt.setInt(1, idRubrica);
+	        int rows = pstmt.executeUpdate();
+	        return rows > 0;
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	        return false;
+	    }
 	}
-
-	{
+}
+	
 
 //
 //// PUNTO 4 : conn 
@@ -137,6 +179,5 @@ public class DAORubricaMappaImpl implements DAORubricaMappa {
 //		}
 
 
-	}
+	
 
-}

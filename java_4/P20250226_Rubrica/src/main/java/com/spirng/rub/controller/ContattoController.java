@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spirng.rub.dto.ContattoDTO;
 import com.spirng.rub.service.ContattiService;
-import com.spirng.rub.service.RubricaService;
+
 
 @RestController
 @RequestMapping("")
