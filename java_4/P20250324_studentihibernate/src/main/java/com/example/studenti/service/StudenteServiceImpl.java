@@ -2,6 +2,7 @@ package com.example.studenti.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,10 +33,20 @@ public class StudenteServiceImpl implements StudenteService {
 		Optional<Studente> opt = dao.findById(matricola);
 		if(opt.isPresent()) {
 			Studente st = opt.get();
-			return new StudenteDTO(st.getMatricola(), st.getNome(), st.getCognome(), st.getAnnoImm());
+			return conversioni.fromStudenteToStudenteDTO(st);
+			//return new StudenteDTO(st.getMatricola(), st.getNome(), st.getCognome(), st.getAnnoImm());
 		}
 		else
 			return null;
+	}
+	
+	@Override
+	public List<StudenteDTO> getGiovani(int annoImmatr) {
+		List<Studente> lista = dao.getGiovani(annoImmatr);
+		
+		return lista.stream()
+			.map(studente -> conversioni.fromStudenteToStudenteDTO(studente))
+			.collect(Collectors.toList());
 	}
 	
 	
@@ -54,5 +65,8 @@ public class StudenteServiceImpl implements StudenteService {
 		dao.deleteAll();
 		return true;
 	}
+
+
+
 
 }

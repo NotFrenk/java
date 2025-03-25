@@ -8,6 +8,7 @@ public interface StudenteService {
 	
 	public boolean immatricola(StudenteDTO dto);
 	public StudenteDTO cerca (Integer matricola);
+	public List<StudenteDTO> getGiovani(int annoImmatr);
 	public List<StudenteDTO> selectAll();
 	public boolean elimina(Integer matricola);
 	public boolean eliminatutti();

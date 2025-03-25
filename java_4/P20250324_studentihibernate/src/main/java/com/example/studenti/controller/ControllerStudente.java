@@ -1,6 +1,7 @@
 package com.example.studenti.controller;
 
 import java.security.Provider.Service;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.studenti.dto.StudenteDTO;
@@ -32,14 +34,17 @@ public class ControllerStudente {
 		return service.cerca(matricola);
 	}
 	
+	@GetMapping(path = "/giovani", produces = "application/json")
+	public List<StudenteDTO> getGiovani(@RequestParam int annoImm){
+		return service.getGiovani(annoImm);
+	}
 	
-	
-	@DeleteMapping(path = "/{matricola}")
+	@DeleteMapping(path = "/elimina/{matricola}")
 	public boolean eliminaStudente(@PathVariable Integer matricola) {
 		return service.elimina(matricola);
 	}
 	
-	@DeleteMapping(path = "/elimina")
+	@DeleteMapping(path = "/eliminaTutti")
 	public boolean eliminaTutti() {
 		return service.eliminatutti();
 	}

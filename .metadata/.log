@@ -3257,3 +3257,235 @@ org.eclipse.jface.text.BadLocationException: 921
 	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:115)
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SESSION 2025-03-25 14:42:27.094 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-25 14:42:28.231
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-03-25 14:42:28.393
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1436) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-25 14:42:35.859
+!MESSAGE Logback config file: /home/user/Scrivania/cose/java/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-25 14:42:36.111
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-25 14:42:36.112
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-25 14:42:36.273
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-25 14:42:36.273
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-25 14:42:38.277
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/usr/lib/jvm/jdk-21.0.4-oracle-x64/bin/java
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=/home/user/Scrivania/cose/java/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1742910158276
+-Dlanguageserver.hover-timeout=225
+-jar
+/home/user/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.springframework.tooling.boot.ls_1.60.0.202502031607/servers/spring-boot-language-server/spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:38.277
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-25 14:42:38.283
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 4522
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.308
+!MESSAGE Boot project ADDED: P20250211_spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.309
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.309
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.325
+!MESSAGE Boot project ADDED: P20250211_springUtenti
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.329
+!MESSAGE Boot project ADDED: P20250214_springReport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.333
+!MESSAGE Boot project ADDED: P20250226_Rubrica
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.347
+!MESSAGE Boot project ADDED: P20250226_SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 14:42:39.347
+!MESSAGE Boot project ADDED: P20250324_studentihibernate
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-03-25 14:58:26.426
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-03-25 15:17:04.187
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jface 2 0 2025-03-25 15:54:33.052
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-03-25 15:54:33.052
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:08:11.042
+!MESSAGE Classpath changed for project: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:08:11.044
+!MESSAGE Boot project ADDED: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:08:40.134
+!MESSAGE Classpath changed for project: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:08:40.134
+!MESSAGE Boot project REMOVED: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:09:03.160
+!MESSAGE Classpath changed for project: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:09:03.160
+!MESSAGE Boot project ADDED: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:10:23.586
+!MESSAGE Classpath changed for project: P20250325_spring_Impiegati
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:10:23.587
+!MESSAGE Boot project REMOVED: P20250325_spring_Impiegati
+!SESSION 2025-03-25 17:17:37.863 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-25 17:17:39.460
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-03-25 17:17:39.629
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1436) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-25 17:17:42.683
+!MESSAGE Logback config file: /home/user/Scrivania/cose/java/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-25 17:17:42.923
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-25 17:17:42.923
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-25 17:17:43.112
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-25 17:17:43.112
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.300
+!MESSAGE Boot project ADDED: P20250211_spring01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.300
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.334
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.336
+!MESSAGE Boot project ADDED: P20250211_springUtenti
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.339
+!MESSAGE Boot project ADDED: P20250214_springReport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.340
+!MESSAGE Boot project ADDED: P20250226_Rubrica
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.340
+!MESSAGE Boot project ADDED: P20250226_SpringUniversità
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.340
+!MESSAGE Boot project ADDED: P20250324_studentihibernate
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-25 17:17:45.363
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/usr/lib/jvm/jdk-21.0.4-oracle-x64/bin/java
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=/home/user/Scrivania/cose/java/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1742919465362
+-Dlanguageserver.hover-timeout=225
+-jar
+/home/user/eclipse/jee-2024-09/eclipse/../../../.p2/pool/plugins/org.springframework.tooling.boot.ls_1.60.0.202502031607/servers/spring-boot-language-server/spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-25 17:17:45.363
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-25 17:17:45.375
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 11405
+
+!ENTRY org.eclipse.jface 2 0 2025-03-25 17:32:30.567
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-03-25 17:32:30.567
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
