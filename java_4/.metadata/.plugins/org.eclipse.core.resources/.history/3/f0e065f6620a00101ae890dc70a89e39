@@ -1,0 +1,13 @@
+package com.spring.rubrica.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class ContattoEntity {
+	
+	@Id
+	private int idcontatto;
+	
+	private String nome,cognome,numero;
+}

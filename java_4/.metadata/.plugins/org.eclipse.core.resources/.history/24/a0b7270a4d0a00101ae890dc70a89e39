@@ -1,0 +1,95 @@
+package com.impiegati.service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.impiegati.dao.DaoImpiegato;
+import com.impiegati.dto.Elimina2DTO;
+import com.impiegati.dto.ImpiegatoDTO;
+import com.impiegati.entity.Impiegato;
+import com.impiegati.utility.Conversioni;
+
+@Service
+@Transactional
+public class ServiceImpiegatoImpl implements ServiceImpiegato{
+	
+	@Autowired
+	private DaoImpiegato dao;
+
+	@Override
+	public boolean assunzione(ImpiegatoDTO dto) {
+		Impiegato entity = Conversioni.FromImpiegatoDTOToImpiegato(dto);
+		return dao.save(entity) != null;
+	}
+
+	@Override
+	public ImpiegatoDTO trovaImpiegato(Integer matricola) {
+		Optional<Impiegato> opt = dao.findById(matricola);
+		if (opt.isPresent()) {
+			Impiegato imp = opt.get();
+			return Conversioni.FromImpiegatoToImpiegatoDTO(imp);
+		}else {
+			return null;
+		}
+	}
+
+	@Override
+	public List<ImpiegatoDTO> getImpiegati() {
+		List<Impiegato>  lista = dao.findAll();
+		
+		return lista.stream()
+				.map(imp -> Conversioni.FromImpiegatoToImpiegatoDTO(imp))
+				.collect(Collectors.toList());
+	}
+
+	@Override
+	public ImpiegatoDTO eliminaImpiegato(Integer matricola) {
+		Optional<Impiegato> opt = dao.findById(matricola);
+		if (opt.isPresent()) {
+			Impiegato imp = opt.get();
+			dao.deleteById(matricola);
+			return Conversioni.FromImpiegatoToImpiegatoDTO(imp);
+		}else {
+			return null;
+		}
+	}
+
+	@Override
+	public ImpiegatoDTO modificaSalario(Integer matricola, int nuovoSalario) {
+		Optional<Impiegato> opt = dao.findById(matricola);
+		if(opt.isPresent()) {
+			Impiegato imp = opt.get();
+			imp.setSalario(nuovoSalario);
+			return Conversioni.FromImpiegatoToImpiegatoDTO(imp);
+		}else {
+			return null;
+		}
+	}
+	
+	// avanzate
+
+	@Override
+	public Elimina2DTO elimina2(Integer matricola) {
+		Optional<Impiegato> opt = dao.findById(matricola);
+		if (opt.isPresent()) {
+			Impiegato imp = opt.get();
+			dao.deleteById(matricola);
+			return Conversioni.FromImpiegatoToImpiegatoDTO(imp);
+		}else {
+			return null;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+}
+

@@ -1,0 +1,23 @@
+package com.impiegati.service;
+
+public class ServiceImpiegatoImpl implements ServiceImpiegato{
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@Service
+@Transactional
+public class StudenteServiceImpl implements StudenteService {
+	
+	@Autowired
+	private DaoStudente dao;

@@ -1,0 +1,24 @@
+package com.spring.rubrica.controller;
+
+@RestController
+@RequestMapping(path="/rubrica")
+public class RubricaController {
+	
+	@Autowired
+	private RubricaService service;
+	
+	@PostMapping(consumes = "application/json")
+	public boolean crea(@RequestBody RubricaDto dto) {
+		return service.creaRubrica(dto);
+	}
+	
+	@GetMapping(path="/{idRubrica}" , produces= "application/json")
+	public RubricaDto cerca(@PathVariable Integer idRubrica) {
+		return service.cerca(idRubrica);
+	}
+	@PostMapping(path="/{idRubrica}/contatti" , consumes ="application/json")
+	public boolean aggiungiContatto(@PathVariable Integer idRubrica,@RequestBody ContattoDto dto) {
+		return service.aggiungiContatto(idRubrica, dto);
+	}
+}
+

@@ -1,0 +1,7 @@
+package com.spring.rubrica.dao;
+
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+
+public class RubricaDao extends JpaRepository<>{
+
+}

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.impiegati.dto.NomeCognomeDTO;
 import com.impiegati.dto.ImpiegatoDTO;
 import com.impiegati.entity.Impiegato;
 import com.impiegati.service.ServiceImpiegato;
@@ -47,6 +48,16 @@ public class ControllerImpiegato {
 	@PatchMapping (path = "/modSalario/{matricola}")
 	public ImpiegatoDTO modificaSalario(@PathVariable Integer matricola, @RequestParam int nuovoSalario) {
 		return service.modificaSalario(matricola, nuovoSalario);
+	}
+	
+	@DeleteMapping(path = "/elimina2/{matricola}", produces = "application/json")
+	public NomeCognomeDTO eliminaMostra(@PathVariable Integer matricola) {
+		return service.elimina2(matricola);
+	}
+	
+	@GetMapping(path = "/tutti2", produces = "application/json")
+	public List<NomeCognomeDTO> tuttiImpiegatiNomeCogn(){
+		return service.getImiegatiNomCogn();
 	}
 }
 

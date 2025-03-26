@@ -1,0 +1,23 @@
+package com.spring.rubrica.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+
+@Entity
+public class RubricaEntity {
+	
+	@Id
+	private int idRubrica;
+	
+	private String proprietario;
+	private int annoCreazione;
+	
+	@OneToMany
+	@JoinColumn(name = "FK_Rubrica")
+	private List<ContattoEntity> contatti= new ArrayList<>();
+}

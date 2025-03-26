@@ -3,6 +3,7 @@ package com.impiegati.utility;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.impiegati.dto.NomeCognomeDTO;
 import com.impiegati.dto.ImpiegatoDTO;
 import com.impiegati.entity.Impiegato;
 
@@ -16,6 +17,11 @@ public class Conversioni {
 		return new ImpiegatoDTO(entity.getMatricola(), entity.getNome(), entity.getCognome(), entity.getSalario());
 	}
 	
+	//per elimnia torna nome cognome
+	public static NomeCognomeDTO FromImpiegatoToNomeCognDTO (Impiegato entity) {
+		return new NomeCognomeDTO(entity.getNome(), entity.getCognome());
+	}
+	
 	public static List<ImpiegatoDTO> fromImpiegatoToImpiegatoDTO(List<Impiegato> ls){
 		List<ImpiegatoDTO> ldto = new ArrayList<ImpiegatoDTO>();
 		
@@ -24,6 +30,14 @@ public class Conversioni {
 		return ldto;
 	}
 	
+	
+	public static List<NomeCognomeDTO> fromImpiegatoToListNomeCognDTO(List<Impiegato> ls){
+		List<NomeCognomeDTO> ldto = new ArrayList<NomeCognomeDTO>();
+		
+		for (Impiegato i : ls)
+			ldto.add(FromImpiegatoToNomeCognDTO(i));
+		return ldto;
+	}
 }
 
 

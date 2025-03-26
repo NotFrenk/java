@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.hibernate.query.sqm.tree.expression.Conversion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.impiegati.dao.DaoImpiegato;
+import com.impiegati.dto.NomeCognomeDTO;
 import com.impiegati.dto.ImpiegatoDTO;
 import com.impiegati.entity.Impiegato;
 import com.impiegati.utility.Conversioni;
@@ -69,6 +71,29 @@ public class ServiceImpiegatoImpl implements ServiceImpiegato{
 			return null;
 		}
 	}
+	
+	// avanzate
+
+	@Override
+	public NomeCognomeDTO elimina2(Integer matricola) {
+		Optional<Impiegato> opt = dao.findById(matricola);
+		if (opt.isPresent()) {
+			Impiegato imp = opt.get();
+			dao.deleteById(matricola);
+			return Conversioni.FromImpiegatoToNomeCognDTO(imp);
+		}else {
+			return null;
+		}
+	}
+	
+	@Override
+	public List<NomeCognomeDTO> getImiegatiNomCogn(){
+		List<Impiegato> lista = dao.findAll();
+		
+		return Conversioni.fromImpiegatoToListNomeCognDTO(lista);
+	}
+	
+	
 	
 	
 	

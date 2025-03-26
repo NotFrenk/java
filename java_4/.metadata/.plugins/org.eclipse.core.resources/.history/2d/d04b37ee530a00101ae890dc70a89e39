@@ -1,0 +1,62 @@
+package com.impiegati.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.impiegati.dto.NomeCognomeDTO;
+import com.impiegati.dto.ImpiegatoDTO;
+import com.impiegati.entity.Impiegato;
+import com.impiegati.service.ServiceImpiegato;
+
+@RestController
+@RequestMapping(path = "/impiegati")
+public class ControllerImpiegato {
+	
+	@Autowired
+	private ServiceImpiegato service;
+	
+	@PostMapping(consumes = "application/json")
+	public boolean assumi(@RequestBody ImpiegatoDTO dto) {
+		return service.assunzione(dto);
+	}
+	
+	@GetMapping (path = "/{matricola}", produces = "application/json")
+	public ImpiegatoDTO cercaImpiegato(@PathVariable Integer matricola) {
+		return service.trovaImpiegato(matricola);
+	}
+	
+	@GetMapping(path = "/tutti", produces = "application/json")
+	public List<ImpiegatoDTO> tuttiImpiegati(){
+		return service.getImpiegati();
+	}
+	
+	@DeleteMapping(path = "/elimina/{matricola}", produces = "application/json")
+	public ImpiegatoDTO rimuoviImpiegato(@PathVariable Integer matricola) {
+		return service.eliminaImpiegato(matricola);
+	}
+	
+	@PatchMapping (path = "/modSalario/{matricola}")
+	public ImpiegatoDTO modificaSalario(@PathVariable Integer matricola, @RequestParam int nuovoSalario) {
+		return service.modificaSalario(matricola, nuovoSalario);
+	}
+	
+	@DeleteMapping(path = "/elimina2/{matricola}", produces = "application/json")
+	public NomeCognomeDTO eliminaMostra(@PathVariable Integer matricola) {
+		return service.elimina2(matricola);
+	}
+}
+
+
+
+
+

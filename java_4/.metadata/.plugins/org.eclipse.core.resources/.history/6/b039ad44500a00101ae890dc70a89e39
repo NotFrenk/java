@@ -1,0 +1,36 @@
+package com.impiegati.dto;
+
+public class Elimina2DTO {
+	
+	private String nome,cognome;
+	
+	public Elimina2DTO() {
+		super();
+	}
+
+	public Elimina2DTO(String nome, String cognome) {
+		super();
+		
+		this.nome = nome;
+		this.cognome = cognome;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+	
+	
+}
