@@ -18,7 +18,7 @@ public class Rubrica {
     private String proprietario;
     private int annoCreazione;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST, orphanRemoval = true)
     @JoinColumn(name = "FK_Rubrica")
     private List<Contatto> contatti = new ArrayList<>();
 

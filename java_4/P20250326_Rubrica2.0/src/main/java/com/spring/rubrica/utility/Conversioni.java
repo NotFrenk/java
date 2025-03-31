@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.spring.rubrica.dto.ContattoDto;
+import com.spring.rubrica.dto.ProprietarioAnnoDTO;
 import com.spring.rubrica.dto.RubricaDto;
 import com.spring.rubrica.entity.Contatto;
 import com.spring.rubrica.entity.Rubrica;
@@ -43,5 +44,10 @@ public class Conversioni {
         rubricaD.setContatti(listaD);
         return rubricaD;
 
+    }
+    
+    //per proprietarioAnnoDTO
+    public static ProprietarioAnnoDTO FromRubricaToPropAnnoDTO(Rubrica entity) {
+    	return new ProprietarioAnnoDTO(entity.getProprietario(), entity.getAnnoCreazione());
     }
 }
