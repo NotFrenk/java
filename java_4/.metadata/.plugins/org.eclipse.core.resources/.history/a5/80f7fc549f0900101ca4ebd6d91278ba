@@ -1,0 +1,19 @@
+package com.impiegati.utility;
+
+import com.impiegati.dto.ImpiegatoDTO;
+import com.impiegati.entity.Impiegato;
+
+public class Conversioni {
+	
+	public static Impiegato FromImpiegatoDTOToImpiegato (ImpiegatoDTO dto) {
+		return new Impiegato(dto.getMatricola(), dto.getNome(), dto.getCognome(), dto.getSalario());
+	}
+	
+	public static ImpiegatoDTO FromImpiegatoToImpiegatoDTO (Impiegato entity) {
+		return new ImpiegatoDTO(entity.getMatricola(), entity.getNome(), entity.getCognome(), entity.getSalario());
+	}
+	
+	
+}
+
+

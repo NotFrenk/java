@@ -4,7 +4,9 @@
 	<item key="replaceBarOpen" value="false"/>
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
+		<item key="selection" value="import java.sql.Connection;"/>
 		<list key="findhistory">
+			<item value="import java.sql.Connection;"/>
 		</list>
 	</section>
 </section>

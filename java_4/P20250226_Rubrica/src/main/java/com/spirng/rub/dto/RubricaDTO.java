@@ -1,6 +1,5 @@
 package com.spirng.rub.dto;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,14 +9,14 @@ public class RubricaDTO {
 	
     private int id;
     private String nomeProprietario;
-    private LocalDate annoCreazione;
+    private int annoCreazione;
     private List<entityContattoTelefonico> contatti = new ArrayList<>();
     
 	public RubricaDTO() {
 		super();
 	}
 
-	public RubricaDTO(int id, String nomeProprietario, LocalDate annoCreazione,
+	public RubricaDTO(int id, String nomeProprietario, int annoCreazione,
 			List<entityContattoTelefonico> contatti) {
 		super();
 		this.id = id;
@@ -42,11 +41,11 @@ public class RubricaDTO {
 		this.nomeProprietario = nomeProprietario;
 	}
 
-	public LocalDate getAnnoCreazione() {
+	public int getAnnoCreazione() {
 		return annoCreazione;
 	}
 
-	public void setAnnoCreazione(LocalDate annoCreazione) {
+	public void setAnnoCreazione(int annoCreazione) {
 		this.annoCreazione = annoCreazione;
 	}
 

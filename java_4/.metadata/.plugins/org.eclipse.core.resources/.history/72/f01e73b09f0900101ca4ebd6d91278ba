@@ -1,0 +1,10 @@
+package com.impiegati.service;
+
+import com.impiegati.dto.ImpiegatoDTO;
+
+public interface ServiceImpiegato {
+	
+	public boolean assunzione(ImpiegatoDTO dto);
+	public ImpiegatoDTO trovaImpiegato (Integer matricola);
+
+}

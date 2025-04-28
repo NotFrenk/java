@@ -1,4 +1,4 @@
-package com.spring.Ute.Controller;
+package com.spring.Ute.Contro<z>ller;
 
 
 import java.util.ArrayList;
@@ -6,7 +6,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +36,7 @@ public class UtenteController {
 	}
 	
 	
-	@GetMapping(path = "/cerca/{id}", produces = "application/json")
+	@GetMapping(path = "/{id}", produces = "application/json")
 	public UtenteDTO cercaPerId(@PathVariable int id) {
 		//Fake
 		//return new Utente(id, "mario", "rossi", "mario", "red");
@@ -49,17 +51,17 @@ public class UtenteController {
 		return service.listaUtenti();
 	}
 	
-	@GetMapping(path = "/nomeCognome/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(path = "/{id}/nomeCognome", produces = MediaType.APPLICATION_JSON_VALUE)
 	public NomeCognomeDTO getNomeCognome(@PathVariable int id) {
 		return service.getNomeCognome(id);
 	}
 	
-	@GetMapping(path = "/cambiaPassword/{id}")
+	@PatchMapping(path = "/{idutente}", produces = "application/json")
 	public boolean cambiaPassword(@PathVariable int id, String password) {
 		return service.cambiaPassword(id, password);
 	}
 	
-	@GetMapping(path = "/eliminaUtente/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@DeleteMapping(path = "/{idutente}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public UtenteDTO eliminaUtente(@PathVariable int id) {
 		return service.eliminaUtente(id);
 		

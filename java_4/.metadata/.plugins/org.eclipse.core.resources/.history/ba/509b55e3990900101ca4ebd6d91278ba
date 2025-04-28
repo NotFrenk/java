@@ -1,0 +1,5 @@
+package com.impiegati.service;
+
+public interface ServiceImpiegato {
+
+}

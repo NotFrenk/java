@@ -1,0 +1,5 @@
+package com.impiegati.dto;
+
+public class ImpiegatoDTO {
+
+}

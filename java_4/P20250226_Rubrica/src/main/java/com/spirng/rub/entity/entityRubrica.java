@@ -1,23 +1,20 @@
 package com.spirng.rub.entity;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 public class entityRubrica {
 	
     private int id;
     private String nomeProprietario;
-    private LocalDate annoCreazione;
+    private int annoCreazione;
     private List<entityContattoTelefonico> contatti = new ArrayList<>();
     
 	public entityRubrica() {
 		super();
 	}
 
-	public entityRubrica(int id, String nomeProprietario, LocalDate annoCreazione, List<entityContattoTelefonico> contatti) {
+	public entityRubrica(int id, String nomeProprietario, int annoCreazione, List<entityContattoTelefonico> contatti) {
 		super();
 		this.id = id;
 		this.nomeProprietario = nomeProprietario;
@@ -41,11 +38,11 @@ public class entityRubrica {
 		this.nomeProprietario = nomeProprietario;
 	}
 
-	public LocalDate getAnnoCreazione() {
+	public int getAnnoCreazione() {
 		return annoCreazione;
 	}
 
-	public void setAnnoCreazione(LocalDate annoCreazione) {
+	public void setAnnoCreazione(int annoCreazione) {
 		this.annoCreazione = annoCreazione;
 	}
 

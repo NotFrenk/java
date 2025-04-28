@@ -1,0 +1,26 @@
+package com.spring.rubrica.service;
+
+import com.spring.rubrica.dto.ContattoDTO;
+import com.spring.rubrica.dto.RubricaDTO;
+
+public class RubricaServiceImpl implements RubricaService{
+
+	@Override
+	public boolean creaRubrica(RubricaDTO dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public RubricaDTO cerca(Integer idRubrica) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean aggiungiContatto(Integer idRubrica, ContattoDTO dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

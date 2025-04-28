@@ -1,0 +1,5 @@
+package com.impiegati.entity;
+
+public class Impiegato {
+
+}

@@ -1,5 +1,6 @@
 package com.spirng.rub.entity;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 
@@ -9,15 +10,16 @@ public class entityContattoTelefonico {
     private String nome;
     private String cognome;
     private String gruppoAppartenenza = "default";
-    private LocalDate dataNascita;
+    private Date dataNascita;
     private boolean preferito = false;
+    private int telefono;
     
 	public entityContattoTelefonico() {
 		super();
 	}
 
 	public entityContattoTelefonico(int idContatto, String nome, String cognome, String gruppoAppartenenza,
-			LocalDate dataNascita, boolean preferito) {
+			Date dataNascita, boolean preferito, int telefono) {
 		super();
 		this.idContatto = idContatto;
 		this.nome = nome;
@@ -25,6 +27,7 @@ public class entityContattoTelefonico {
 		this.gruppoAppartenenza = gruppoAppartenenza;
 		this.dataNascita = dataNascita;
 		this.preferito = preferito;
+		this.setTelefono(telefono);
 	}
 
 	public int getIdContatto() {
@@ -59,11 +62,11 @@ public class entityContattoTelefonico {
 		this.gruppoAppartenenza = gruppoAppartenenza;
 	}
 
-	public LocalDate getDataNascita() {
+	public Date getDataNascita() {
 		return dataNascita;
 	}
 
-	public void setDataNascita(LocalDate dataNascita) {
+	public void setDataNascita(Date dataNascita) {
 		this.dataNascita = dataNascita;
 	}
 
@@ -73,6 +76,14 @@ public class entityContattoTelefonico {
 
 	public void setPreferito(boolean preferito) {
 		this.preferito = preferito;
+	}
+
+	public int getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
 	}
     
     

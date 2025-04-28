@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 #Wed Mar 05 10:11:52 CET 2025
 display=\:0
 host=frenk-HP-Notebook-PC
 process-id=6703
 user=frenk
+=======
+#Wed Mar 26 19:07:15 CET 2025
+display=\:0
+host=VM-ITS-C01
+process-id=20509
+user=user
+>>>>>>> 1bcaa8d0a9eb972e27fc70d3fe3b4206aa94c3f6

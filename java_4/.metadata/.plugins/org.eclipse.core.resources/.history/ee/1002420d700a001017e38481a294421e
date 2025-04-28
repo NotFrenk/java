@@ -1,0 +1,29 @@
+package com.spring.rubrica.utility;
+
+import java.util.List;
+
+import com.spring.rubrica.dto.ContattoDTO;
+import com.spring.rubrica.dto.RubricaDTO;
+import com.spring.rubrica.entity.ContattoEntity;
+import com.spring.rubrica.entity.RubricaEntity;
+
+public class Conversioni {
+	
+	public static ContattoEntity FromContattoDTOToContatto (ContattoDTO dto) {
+		return new ContattoEntity(dto.getIdcontatto(), dto.getNome(), dto.getCognome(), dto.getNumero());
+	}
+	
+	public static ContattoDTO FromContattoToContattoDTO (ContattoEntity entity) {
+		return new ContattoDTO(entity.getIdcontatto(), entity.getNome(), entity.getCognome(), entity.getNumero());
+	}
+	
+	public static RubricaEntity FromRubricaDTOToRubrica (RubricaDTO dto) {
+		RubricaEntity rubrica = new RubricaEntity(dto.getIdRubrica(), dto.getProprietario(), dto.getAnnoCreazione());
+		
+		List<ContattoDTO> listaD = dto.getContatti();
+		
+		List<ContattoEntity> lista = listaD.stream()
+				.map(conta)
+	}
+
+}

@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=906195928819352
+=======
+platformState=1845817148175556
+>>>>>>> 1bcaa8d0a9eb972e27fc70d3fe3b4206aa94c3f6
 quickStart=false
-tipsAndTricks=true
+tipsAndTricks=false

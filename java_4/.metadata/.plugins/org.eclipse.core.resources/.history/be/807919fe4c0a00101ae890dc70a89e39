@@ -1,0 +1,29 @@
+package com.impiegati.utility;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.impiegati.dto.ImpiegatoDTO;
+import com.impiegati.entity.Impiegato;
+
+public class Conversioni {
+	
+	public static Impiegato FromImpiegatoDTOToImpiegato (ImpiegatoDTO dto) {
+		return new Impiegato(dto.getMatricola(), dto.getNome(), dto.getCognome(), dto.getSalario());
+	}
+	
+	public static ImpiegatoDTO FromImpiegatoToImpiegatoDTO (Impiegato entity) {
+		return new ImpiegatoDTO(entity.getMatricola(), entity.getNome(), entity.getCognome(), entity.getSalario());
+	}
+	
+	public static List<ImpiegatoDTO> fromImpiegatoToImpiegatoDTO(List<Impiegato> ls){
+		List<ImpiegatoDTO> ldto = new ArrayList<ImpiegatoDTO>();
+		
+		for (Impiegato i : ls)
+			ldto.add(FromImpiegatoToImpiegatoDTO(i));
+		return ldto;
+	}
+	
+}
+
+
